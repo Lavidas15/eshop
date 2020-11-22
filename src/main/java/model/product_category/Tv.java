@@ -7,8 +7,8 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "fridge")
-public class Fridge extends Product {
+@Table(name = "tv")
+public class Tv extends Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,17 +28,25 @@ public class Fridge extends Product {
 
     private String colour;
 
-    @Column(name = "energetic_class")
-    private String energeticClass;
+    @Column(name = "screen_size")
+    private int screenSize;
 
-    @Column(name = "freezer_location")
-    private String freezerLocation;
+    @Column(name = "aspect_ratio")
+    private String aspectRatio;
 
-    @Column(name = "fridge_capacity")
-    private float fridgeCapacity;
+    private String resolution;
 
-    @Column(name = "freezer_capacity")
-    private float freezerCapacity;
+    @Column(name = "smart_tv")
+    private boolean smartTv;
+
+    @Column(name = "three_d")
+    private boolean threeD;
+
+    private int hdmi;
+
+    private int usb;
+
+    private boolean lan;
 
     private float weight;
 
@@ -100,36 +108,68 @@ public class Fridge extends Product {
         this.colour = colour;
     }
 
-    public String getEnergeticClass() {
-        return energeticClass;
+    public int getScreenSize() {
+        return screenSize;
     }
 
-    public void setEnergeticClass(String energeticClass) {
-        this.energeticClass = energeticClass;
+    public void setScreenSize(int screenSize) {
+        this.screenSize = screenSize;
     }
 
-    public String getFreezerLocation() {
-        return freezerLocation;
+    public String getAspectRatio() {
+        return aspectRatio;
     }
 
-    public void setFreezerLocation(String freezerLocation) {
-        this.freezerLocation = freezerLocation;
+    public void setAspectRatio(String aspectRatio) {
+        this.aspectRatio = aspectRatio;
     }
 
-    public float getFridgeCapacity() {
-        return fridgeCapacity;
+    public String getResolution() {
+        return resolution;
     }
 
-    public void setFridgeCapacity(float fridgeCapacity) {
-        this.fridgeCapacity = fridgeCapacity;
+    public void setResolution(String resolution) {
+        this.resolution = resolution;
     }
 
-    public float getFreezerCapacity() {
-        return freezerCapacity;
+    public boolean isSmartTv() {
+        return smartTv;
     }
 
-    public void setFreezerCapacity(float freezerCapacity) {
-        this.freezerCapacity = freezerCapacity;
+    public void setSmartTv(boolean smartTv) {
+        this.smartTv = smartTv;
+    }
+
+    public boolean isThreeD() {
+        return threeD;
+    }
+
+    public void setThreeD(boolean threeD) {
+        this.threeD = threeD;
+    }
+
+    public int getHdmi() {
+        return hdmi;
+    }
+
+    public void setHdmi(int hdmi) {
+        this.hdmi = hdmi;
+    }
+
+    public int getUsb() {
+        return usb;
+    }
+
+    public void setUsb(int usb) {
+        this.usb = usb;
+    }
+
+    public boolean isLan() {
+        return lan;
+    }
+
+    public void setLan(boolean lan) {
+        this.lan = lan;
     }
 
     public float getWeight() {

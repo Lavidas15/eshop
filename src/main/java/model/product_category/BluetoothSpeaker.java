@@ -7,8 +7,9 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "fridge")
-public class Fridge extends Product {
+@Table(name = "bluetooth_speaker")
+public class BluetoothSpeaker extends Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,17 +29,19 @@ public class Fridge extends Product {
 
     private String colour;
 
-    @Column(name = "energetic_class")
-    private String energeticClass;
+    private int power;
 
-    @Column(name = "freezer_location")
-    private String freezerLocation;
+    @Column(name = "charging_conector")
+    private String chargingConector;
 
-    @Column(name = "fridge_capacity")
-    private float fridgeCapacity;
+    @Column(name = "aux_input")
+    private boolean auxInput;
 
-    @Column(name = "freezer_capacity")
-    private float freezerCapacity;
+    @Column(name = "work_time")
+    private float workTime;
+
+    @Column(name = "dust_water_resistance")
+    private String dustAndWaterResistance;
 
     private float weight;
 
@@ -100,36 +103,44 @@ public class Fridge extends Product {
         this.colour = colour;
     }
 
-    public String getEnergeticClass() {
-        return energeticClass;
+    public int getPower() {
+        return power;
     }
 
-    public void setEnergeticClass(String energeticClass) {
-        this.energeticClass = energeticClass;
+    public void setPower(int power) {
+        this.power = power;
     }
 
-    public String getFreezerLocation() {
-        return freezerLocation;
+    public String getChargingConector() {
+        return chargingConector;
     }
 
-    public void setFreezerLocation(String freezerLocation) {
-        this.freezerLocation = freezerLocation;
+    public void setChargingConector(String chargingConector) {
+        this.chargingConector = chargingConector;
     }
 
-    public float getFridgeCapacity() {
-        return fridgeCapacity;
+    public boolean isAuxInput() {
+        return auxInput;
     }
 
-    public void setFridgeCapacity(float fridgeCapacity) {
-        this.fridgeCapacity = fridgeCapacity;
+    public void setAuxInput(boolean auxInput) {
+        this.auxInput = auxInput;
     }
 
-    public float getFreezerCapacity() {
-        return freezerCapacity;
+    public float getWorkTime() {
+        return workTime;
     }
 
-    public void setFreezerCapacity(float freezerCapacity) {
-        this.freezerCapacity = freezerCapacity;
+    public void setWorkTime(float workTime) {
+        this.workTime = workTime;
+    }
+
+    public String getDustAndWaterResistance() {
+        return dustAndWaterResistance;
+    }
+
+    public void setDustAndWaterResistance(String dustAndWaterResistance) {
+        this.dustAndWaterResistance = dustAndWaterResistance;
     }
 
     public float getWeight() {

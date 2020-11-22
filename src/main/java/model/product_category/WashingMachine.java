@@ -1,5 +1,6 @@
 package model.product_category;
 
+import model.Product;
 import model.ProductType;
 
 import javax.persistence.*;
@@ -7,7 +8,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "washing_machine")
-public class WashingMachine {
+public class WashingMachine extends Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
