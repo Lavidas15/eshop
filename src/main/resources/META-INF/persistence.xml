@@ -10,6 +10,7 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
         <class>model.product_category.Cooker</class>
         <class>model.product_category.Microwave</class>
         <class>model.product_category.Fridge</class>
+        <class>model.product_category.WashingMachine</class>
 
 
         <properties>
