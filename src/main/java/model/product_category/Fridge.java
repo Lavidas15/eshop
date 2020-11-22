@@ -1,14 +1,13 @@
 package model.product_category;
 
-import model.Product;
 import model.ProductType;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "microwave")
-public class Microwave extends Product {
+@Table(name = "fridge")
+public class Fridge {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,13 +27,17 @@ public class Microwave extends Product {
 
     private String colour;
 
-    private int power;
-
     @Column(name = "energetic_class")
     private String energeticClass;
 
+    @Column(name = "freezer_location")
+    private String freezerLocation;
 
-    private float capacity;
+    @Column(name = "fridge_capacity")
+    private float fridgeCapacity;
+
+    @Column(name = "freezer_capacity")
+    private float freezerCapacity;
 
     private float weight;
 
@@ -96,14 +99,6 @@ public class Microwave extends Product {
         this.colour = colour;
     }
 
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
-    }
-
     public String getEnergeticClass() {
         return energeticClass;
     }
@@ -112,12 +107,28 @@ public class Microwave extends Product {
         this.energeticClass = energeticClass;
     }
 
-    public float getCapacity() {
-        return capacity;
+    public String getFreezerLocation() {
+        return freezerLocation;
     }
 
-    public void setCapacity(float capacity) {
-        this.capacity = capacity;
+    public void setFreezerLocation(String freezerLocation) {
+        this.freezerLocation = freezerLocation;
+    }
+
+    public float getFridgeCapacity() {
+        return fridgeCapacity;
+    }
+
+    public void setFridgeCapacity(float fridgeCapacity) {
+        this.fridgeCapacity = fridgeCapacity;
+    }
+
+    public float getFreezerCapacity() {
+        return freezerCapacity;
+    }
+
+    public void setFreezerCapacity(float freezerCapacity) {
+        this.freezerCapacity = freezerCapacity;
     }
 
     public float getWeight() {
