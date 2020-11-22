@@ -1,6 +1,7 @@
 import configuration.SpringConfig;
 import model.Product;
 import model.ProductType;
+import model.product_category.Cooker;
 import model.product_category.Dishwasher;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import service.JpaService;
@@ -11,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Dishwasher dishwasher = new Dishwasher();
         dishwasher.setProductName("safsaf");
+        dishwasher.setQuantity(30);
         dishwasher.setPrice(new BigDecimal(12));
         dishwasher.setDiscount(1);
         dishwasher.setType(ProductType.DISHWASHER);
@@ -26,7 +28,17 @@ public class Main {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         JpaService jpaService = context.getBean(JpaService.class);
-        jpaService.addProductIntoDB(dishwasher);
+//        jpaService.addProductIntoDB(dishwasher);
+
+        Cooker cooker = new Cooker();
+        cooker.setProductName("a");
+        cooker.setQuantity(14);
+        cooker.setPrice(new BigDecimal(700));
+        cooker.setDiscount(1);
+        cooker.setType(ProductType.COOKER);
+        cooker.setDimensions("60x50x80");
+        cooker.setColour("red");
+        jpaService.addProductIntoDB(cooker);
 
 
 

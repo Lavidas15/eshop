@@ -6,11 +6,10 @@ import model.ProductType;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Entity
-@Table(name = "dishwasher")
-public class Dishwasher extends Product {
+@Table(name = "cooker")
+public class Cooker extends Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,20 +30,16 @@ public class Dishwasher extends Product {
 
     private String colour;
 
-    private String temperatures;
-
-    private boolean display;
-
-    @Column(name = "half_load")
-    private boolean halfLoad;
-
-    @Column(name = "built_in")
-    private boolean builtIn;
-
     @Column(name = "energetic_class")
     private String energeticClass;
 
-    private float capacity;
+    private int hotplates;
+
+    @Column(name = "oven_type")
+    private String ovenType;
+
+    @Column(name = "oven_capacity")
+    private float ovenCapacity;
 
     private float weight;
 
@@ -106,38 +101,6 @@ public class Dishwasher extends Product {
         this.colour = colour;
     }
 
-    public String getTemperatures() {
-        return temperatures;
-    }
-
-    public void setTemperatures(String temperatures) {
-        this.temperatures = temperatures;
-    }
-
-    public boolean isDisplay() {
-        return display;
-    }
-
-    public void setDisplay(boolean display) {
-        this.display = display;
-    }
-
-    public boolean isHalfLoad() {
-        return halfLoad;
-    }
-
-    public void setHalfLoad(boolean halfLoad) {
-        this.halfLoad = halfLoad;
-    }
-
-    public boolean isBuiltIn() {
-        return builtIn;
-    }
-
-    public void setBuiltIn(boolean builtIn) {
-        this.builtIn = builtIn;
-    }
-
     public String getEnergeticClass() {
         return energeticClass;
     }
@@ -146,12 +109,28 @@ public class Dishwasher extends Product {
         this.energeticClass = energeticClass;
     }
 
-    public float getCapacity() {
-        return capacity;
+    public int getHotplates() {
+        return hotplates;
     }
 
-    public void setCapacity(float capacity) {
-        this.capacity = capacity;
+    public void setHotplates(int hotplates) {
+        this.hotplates = hotplates;
+    }
+
+    public String getOvenType() {
+        return ovenType;
+    }
+
+    public void setOvenType(String ovenType) {
+        this.ovenType = ovenType;
+    }
+
+    public float getOvenCapacity() {
+        return ovenCapacity;
+    }
+
+    public void setOvenCapacity(float ovenCapacity) {
+        this.ovenCapacity = ovenCapacity;
     }
 
     public float getWeight() {
@@ -170,6 +149,3 @@ public class Dishwasher extends Product {
         this.equipment = equipment;
     }
 }
-
-
-

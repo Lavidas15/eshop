@@ -1,6 +1,7 @@
 package model;
 
 public enum ProductType {
-DISHWASHER;
+DISHWASHER,
+COOKER;
 
 }
