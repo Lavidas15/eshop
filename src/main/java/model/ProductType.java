@@ -1,7 +1,38 @@
 package model;
 
 public enum ProductType {
-DISHWASHER,
-COOKER;
+    DISHWASHER,
+    COOKER,
+    MICROWAVE,
+    WASHING_MACHINE,
+    HAIR_DRYER,
+    ELECTRIC_TOOTHBRUSH,
+
+    TV,
+    SOUNDBAR,
+    HEADPHONES,
+    BLUETOOTH_SPEAKER,
+    GRAMOPHONE,
+
+    SMARTPHONE,
+
+    LAPTOP,
+    PC,
+    TABLET,
+    MONITOR,
+    PRINTER,
+    MOUSE,
+    KEYBOARD,
+
+    CONSOLE,
+    PC_GAME,
+    XBOX_GAME,
+    PLAYSTATION_GAME,
+
+    DRON,
+    SMARTWATCH,
+    SMART_HOME,
+    SPORT_CAMERA,
+    SCOOTER;
 
 }
