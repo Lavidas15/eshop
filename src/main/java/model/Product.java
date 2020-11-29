@@ -25,20 +25,22 @@ public class Product {
             joinColumns = {@JoinColumn(name = "product_id"
                     ,referencedColumnName = "id"
             )})
-    @MapKeyColumn(name = "key")
-    @Column(name = "value")
+    @MapKeyColumn(name = "result")
+    @Column(name = "property")
     private Map<String,String> properties;
 
     @ManyToMany(mappedBy = "products")
-    private List<Order> orders;
+    private List<Purchase> purchases = new ArrayList<>();
 
-    public String getProduct_name() {
+
+    public String getProductName() {
         return productName;
     }
 
-    public void setProduct_name(String product_name) {
-        this.productName = product_name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
+
 
     public BigDecimal getPrice() {
         return price;
@@ -72,11 +74,12 @@ public class Product {
         this.properties = properties;
     }
 
-    public List<Order> getOrders() {
-        return orders;
+
+    public List<Purchase> getPurchases() {
+        return purchases;
     }
 
-    public void setOrders(List<Order> orders) {
-        this.orders = orders;
+    public void setPurchases(List<Purchase> purchases) {
+        this.purchases = purchases;
     }
 }

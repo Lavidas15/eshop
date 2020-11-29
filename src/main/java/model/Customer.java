@@ -26,7 +26,7 @@ public class Customer {
     private Address address;
 
     @OneToMany(mappedBy = "customer")
-    private List<Order> orders;
+    private List<Purchase> orders;
 
     public String getName() {
         return name;
@@ -76,11 +76,11 @@ public class Customer {
         this.address = address;
     }
 
-    public List<Order> getOrders() {
+    public List<Purchase> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<Order> orders) {
+    public void setOrders(List<Purchase> orders) {
         this.orders = orders;
     }
 }

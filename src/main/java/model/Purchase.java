@@ -1,18 +1,18 @@
 package model;
 
-import org.eclipse.persistence.jpa.jpql.parser.DateTime;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "order")
-public class Order {
+@Table(name = "purchase")
+public class Purchase {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
 
     private Date date;
 
@@ -26,11 +26,11 @@ public class Order {
     private Customer customer;
 
     @ManyToMany
-    @JoinTable(name = "order_has_product",
-            joinColumns = {@JoinColumn(name = "order_id", referencedColumnName = "id")},
+    @JoinTable(name = "purchase_has_product",
+            joinColumns = {@JoinColumn(name = "purchase_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "product_id", referencedColumnName = "id")}
     )
-    private List<Product> products;
+    private List<Product> products = new ArrayList<>();
 
     public Date getDate() {
         return date;
