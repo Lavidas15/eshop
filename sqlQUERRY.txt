@@ -1,0 +1,145 @@
+CREATE TABLE dishwasher ( 
+	id serial PRIMARY KEY, 
+	product_name varchar(70),
+	quantity int,
+	price decimal, 
+	discount float, 
+	type varchar(30),
+	dimensions varchar(30),
+	colour varchar(30),
+	temperatures varchar(30),
+	display boolean,
+	half_load boolean,
+	built_in boolean,
+	energetic_class varchar(10),
+	capacity float,
+	weight float,
+	equipment varchar(256)
+);
+
+
+CREATE TABLE dishwasher ( 
+	id serial PRIMARY KEY, 
+	product_name varchar(70),
+	quantity int,
+	price decimal, 
+	discount float, 
+	type varchar(30),
+	dimensions varchar(30),
+	colour varchar(30),
+	energetic_class varchar(10),
+	hotplates int,
+	oven_type varchar(30),
+	oven_capacity float,
+	weight float,	
+	equipment varchar(256)
+);
+
+CREATE TABLE microwave ( 
+	id serial PRIMARY KEY, 
+	product_name varchar(70),
+	quantity int,
+	price decimal, 
+	discount float, 
+	type varchar(30),
+	dimensions varchar(30),
+	colour varchar(30),
+	energetic_class varchar(10),
+	power int,
+	capacity float,
+	weight float,	
+	equipment varchar(256)
+);
+
+CREATE TABLE fridge ( 
+	id serial PRIMARY KEY, 
+	product_name varchar(70),
+	quantity int,
+	price decimal, 
+	discount float, 
+	type varchar(30),
+	dimensions varchar(30),
+	colour varchar(30),
+	energetic_class varchar(10),
+	freezer_location varchar(10),
+	fridge_capacity float,
+	freezer_capacity float,
+	weight float,	
+	equipment varchar(256)
+);
+
+CREATE TABLE washing_machine ( 
+	id serial PRIMARY KEY, 
+	product_name varchar(70),
+	quantity int,
+	price decimal, 
+	discount float, 
+	type varchar(30),
+	dimensions varchar(30),
+	colour varchar(30),
+	energetic_class varchar(10),
+	max_speed int,
+	display boolean,
+	capacity float,
+	weight float,	
+	equipment varchar(256)
+);
+
+CREATE TABLE tv ( 
+	id serial PRIMARY KEY, 
+	product_name varchar(70),
+	quantity int,
+	price decimal, 
+	discount float, 
+	type varchar(30),
+	dimensions varchar(30),
+	colour varchar(30),
+	screen_size int,
+	aspect_ratio varchar(10),
+	resolution varchar(20),
+	smart_tv boolean,
+	three_d boolean,
+	hdmi int,
+	usb int,
+	lan boolean,
+	weight float,	
+	equipment varchar(256)
+);
+
+CREATE TABLE bluetooth_speaker ( 
+	id serial PRIMARY KEY, 
+	product_name varchar(70),
+	quantity int,
+	price decimal, 
+	discount float, 
+	type varchar(30),
+	dimensions varchar(30),
+	colour varchar(30),
+	power int,
+	charging_conector varchar(10),
+	aux_input boolean,
+	work_time float,
+	dust_water_resistance varchar(10),
+	weight float,	
+	equipment varchar(256)
+);
+
+CREATE TABLE gramophone ( 
+	id serial PRIMARY KEY, 
+	product_name varchar(70),
+	quantity int,
+	price decimal, 
+	discount float, 
+	type varchar(30),
+	dimensions varchar(30),
+	colour varchar(30),
+	drive varchar(30),
+	speeds varchar(30),
+	aux_input boolean,
+	rca_input boolean,
+	weight float,	
+	equipment varchar(256)
+);
+CREATE TABLE dishwasher (
+
+);
