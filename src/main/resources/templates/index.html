@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="pl">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
   <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>SKLEP INTERNETOWY</title>
-  
-  <link rel="stylesheet" href="style.css" type="text/css">
+
+  <link rel="stylesheet" th:href="@{/css/style.css}"/>
+<!--  <link rel="stylesheet" href="./static/css/style.css" type="text/css">-->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -24,15 +25,15 @@
     <header class="header1" id="myHeader">
        
               <ul>
-                  <li><img src="img/thor.png" class="img-fluid" alt="logo"></li>
+                  <li><img src="../../../../img/thor.png" class="img-fluid" alt="logo"></li>
                   <li>
                     <form action="/action_page.php">
                       <input type="text" id="keyword" placeholder="Wpisz nazwę produktu" autocomplete="off">
                       <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                   </li>
-                  <li><img src="img/user.png" class="img-fluid" alt="logo"></li>
-                  <li><img src="img/shopping-cart-xxl.png" class="img-fluid" alt="logo"></li>
+                  <li><img src="../../../../img/user.png" class="img-fluid" alt="logo"></li>
+                  <li><img src="../../../../img/shopping-cart-xxl.png" class="img-fluid" alt="logo"></li>
                   <!-- <li><div class="a_element"><a href="account.html">KOSZYK</a></div></li> -->
               </ul>
     </header>
@@ -272,19 +273,19 @@
 
 	
     <div class="ad_r">
-      <a href=#><img src="img/index_img/samsung.jpg" alt="s20" ></a>
+      <a href=#><img src="../../../../img/index_img/samsung.jpg" alt="s20" ></a>
     </div>
 
     <div class="ad_r">
-      <img src="img/index_img/mac.jpg" alt="19pro" >
+      <img src="../../../../img/index_img/mac.jpg" alt="19pro" >
     </div>
 
     <div class="ad_r">
-      <img src="img/index_img/xiaomi.jpg" alt="19pro" >
+      <img src="../../../../img/index_img/xiaomi.jpg" alt="19pro" >
     </div>
 
     <div class="ad_r">
-      <img src="img/index_img/huawei.jpg" alt="19pro" >
+      <img src="../../../../img/index_img/huawei.jpg" alt="19pro" >
     </div>
 
     <footer>
