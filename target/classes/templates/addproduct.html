@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>SKLEP INTERNETOWY</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  -->
+
+
+    <script>
+       function productTypeProperties() {
+           var type = document.getElementById("type");
+           if(type = "dishwasher") {
+               document.getElementById("properties").innerHTML =
+                   "<label for=\"productName\">product name: </label> <input type=\"text\" id=\"productName\" name=\"productName\"><br>" +
+                   "<label for=\"price\">price: </label> <input type=\"number\" step=\"0.01\" id=\"price\" name=\"price\"><br>" +
+                   "<label for=\"quantity\">quantity: </label> <input type=\"number\" id=\"quantity\" name=\"quantity\"><br>" +
+                   "<label for=\"type\">type: </label> <input <input type=\"text\" value=\"DISHWASHER\" id=\"type\" name=\"type\"><br>" +
+
+                   "<label for=\"dimensions\">dimensions: </label> <input <input type=\"text\" id=\"dimensions\" name=\"dimensions\"><br>" +
+                   "<label for=\"colour\">colour: </label> <input <input type=\"text\" id=\"colour\" name=\"colour\"><br>" +
+                   "<label for=\"display\">display: </label> <input <input type=\"text\" id=\"display\" name=\"display\"><br>" +
+                   "<label for=\"energetic_class\">energetic class: </label> <input <input type=\"text\" id=\"energetic_class\" name=\"energetic_class\"><br>" +
+                   "<label for=\"capacity\">capacity: </label> <input <input type=\"text\" id=\"capacity\" name=\"capacity\"><br>" +
+                   "<label for=\"equipment\">equipment: </label> <input <input type=\"text\" id=\"equipment\" name=\"equipment\"><br>" +
+                   "<label for=\"warranty\">warranty: </label> <input <input type=\"text\" id=\"warranty\" name=\"warranty\"><br>"
+
+           }
+       }
+    </script>
+</head>
+<body>
+
+<header class="header1" id="myHeader">
+
+    <ul>
+        <li><img src="img/thor.png" class="img-fluid" alt="logo"></li>
+        <li>
+            <form action="/action_page.php">
+                <input type="text" id="keyword" placeholder="Wpisz nazwę produktu" autocomplete="off">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </li>
+        <li><img src="img/user.png" class="img-fluid" alt="logo"></li>
+        <li><img src="img/shopping-cart-xxl.png" class="img-fluid" alt="logo"></li>
+    </ul>
+</header>
+
+
+<select name="product_type" id="type" onchange="productTypeProperties();">
+    <option value="dishwasher">DISHWASHER</option>
+    <option value="cooker">COOKER</option>
+    <option value="microwave">MICROWAVE</option>
+    <option value="washing_machine">WASHING_MACHINE</option>
+    <option value="hair_dryer">HAIR_DRYER</option>
+    <option value="electric_toothbrush">ELECTRIC_TOOTHBRUSH</option>
+    <option value="tv">TV</option>
+    <option value="soundbar">SOUNDBAR</option>
+    <option value="headphones">HEADPHONES</option>
+    <option value="bluetooth_speaker">BLUETOOTH_SPEAKER</option>
+    <option value="gramophone">GRAMOPHONE</option>
+    <option value="smartphone">SMARTPHONE</option>
+    <option value="laptop">LAPTOP</option>
+    <option value="pc">PC</option>
+    <option value="tablet">TABLET</option>
+    <option value="monitor">MONITOR</option>
+    <option value="printer">PRINTER</option>
+    <option value="mouse">MOUSE</option>
+    <option value="keyboard">KEYBOARD</option>
+    <option value="console">CONSOLE</option>
+    <option value="pc_game">PC_GAME</option>
+    <option value="xbox_game">XBOX_GAME</option>
+    <option value="playstation_game">PLAYSTATION_GAME</option>
+    <option value="dron">DRON</option>
+    <option value="smartwatch">SMARTWATCH</option>
+    <option value="smart_home">SMART_HOME</option>
+    <option value="sport_camera">SPORT_CAMERA</option>
+    <option value="scooter">SCOOTER</option>
+</select>
+
+<div id="properties">
+
+</div>
+
+
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 stopka">
+
+
+
+                <div class="col-sm-6">
+                    <a href=# style="font-size: 20px; color: black;">PANEL ADMINISTRATORA</a>
+                </div>
+
+                <div class="col-sm-6">
+                    <a href=# style="font-size: 20px; color: black;">O NAS</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+</script>
+
+
+</body>
+</html>
