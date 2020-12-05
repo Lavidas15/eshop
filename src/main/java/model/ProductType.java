@@ -10,9 +10,7 @@ public enum ProductType {
 
     TV,
     SOUNDBAR,
-    HEADPHONES,
-    BLUETOOTH_SPEAKER,
-    GRAMOPHONE,
+
 
     SMARTPHONE,
 
@@ -29,7 +27,7 @@ public enum ProductType {
     XBOX_GAME,
     PLAYSTATION_GAME,
 
-    DRON,
+    DRONE,
     SMARTWATCH,
     SMART_HOME,
     SPORT_CAMERA,
