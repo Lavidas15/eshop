@@ -4,9 +4,6 @@ public enum ProductType {
     DISHWASHER,
     COOKER,
     MICROWAVE,
-    WASHING_MACHINE,
-    HAIR_DRYER,
-    ELECTRIC_TOOTHBRUSH,
 
     TV,
     SOUNDBAR,
@@ -17,10 +14,7 @@ public enum ProductType {
     LAPTOP,
     PC,
     TABLET,
-    MONITOR,
-    PRINTER,
-    MOUSE,
-    KEYBOARD,
+
 
     CONSOLE,
     PC_GAME,
@@ -29,8 +23,6 @@ public enum ProductType {
 
     DRONE,
     SMARTWATCH,
-    SMART_HOME,
-    SPORT_CAMERA,
     SCOOTER;
 
 }
