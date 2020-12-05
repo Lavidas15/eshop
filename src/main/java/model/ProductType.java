@@ -8,13 +8,11 @@ public enum ProductType {
     TV,
     SOUNDBAR,
 
-
     SMARTPHONE,
 
     LAPTOP,
     PC,
     TABLET,
-
 
     CONSOLE,
     PC_GAME,
